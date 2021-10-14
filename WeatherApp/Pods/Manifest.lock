@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.4.4)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - PromiseKit (7.999.0):
+    - PromiseKit/CorePromise (= 7.999.0)
+    - PromiseKit/Foundation (= 7.999.0)
+  - PromiseKit/CorePromise (7.999.0)
+  - PromiseKit/Foundation (7.999.0):
+    - PromiseKit/CorePromise
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - Moya (= 15.0.0)
+  - PromiseKit (from `https://github.com/mxcl/PromiseKit.git`, branch `v7`, tag `7.0.0-rc1`)
+  - TinyConstraints (= 4.0.2)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - TinyConstraints
+
+EXTERNAL SOURCES:
+  PromiseKit:
+    :branch: v7
+    :git: https://github.com/mxcl/PromiseKit.git
+    :tag: 7.0.0-rc1
+
+CHECKOUT OPTIONS:
+  PromiseKit:
+    :commit: dc04daa3c7e9d9585dc3e9d06b1295de0fb14901
+    :git: https://github.com/mxcl/PromiseKit.git
+    :tag: 7.0.0-rc1
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  PromiseKit: 980571df0d6c4903c85daeb7c44b36493505f8b1
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 94b710f417a32189d68db68ba31e7b0ce43e4bbb
+
+COCOAPODS: 1.11.2

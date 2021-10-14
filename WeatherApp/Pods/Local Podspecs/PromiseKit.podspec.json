@@ -1,0 +1,202 @@
+{
+  "name": "PromiseKit",
+  "version": "7.999.0",
+  "source": {
+    "git": "https://github.com/mxcl/PromiseKit.git",
+    "tag": "7.999.0"
+  },
+  "pod_target_xcconfig": {
+    "OTHER_SWIFT_FLAGS": "-DPMKCocoaPods"
+  },
+  "license": "MIT",
+  "summary": "Promises for Swift & ObjC.",
+  "homepage": "http://mxcl.dev/PromiseKit/",
+  "description": "A thoughtful and complete implementation of promises for iOS, macOS, watchOS and tvOS with first-class support for both Objective-C and Swift.",
+  "social_media_url": "https://twitter.com/mxcl",
+  "authors": {
+    "Max Howell": "mxcl@me.com"
+  },
+  "documentation_url": "http://mxcl.dev/PromiseKit/reference/v7/Classes/Promise.html",
+  "default_subspecs": [
+    "CorePromise",
+    "Foundation"
+  ],
+  "requires_arc": true,
+  "swift_versions": [
+    "5.3",
+    "5.4"
+  ],
+  "platforms": {
+    "ios": "9.0",
+    "osx": "10.10",
+    "watchos": "3.0",
+    "tvos": "9.0"
+  },
+  "subspecs": [
+    {
+      "name": "CloudKit",
+      "source_files": "Sources/PMKCloudKit/*",
+      "frameworks": "CloudKit",
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "platforms": {
+        "ios": "10.0",
+        "osx": "10.12",
+        "tvos": "10.0",
+        "watchos": "3.0"
+      }
+    },
+    {
+      "name": "CorePromise",
+      "source_files": "Sources/PromiseKit/**/*",
+      "frameworks": "Foundation",
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.10",
+        "watchos": "2.0",
+        "tvos": "9.0"
+      }
+    },
+    {
+      "name": "CoreLocation",
+      "source_files": "Sources/PMKCoreLocation/*",
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "frameworks": "CoreLocation",
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.10",
+        "watchos": "3.0",
+        "tvos": "9.0"
+      }
+    },
+    {
+      "name": "Foundation",
+      "source_files": "Sources/PMKFoundation/*",
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "frameworks": "Foundation",
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.10",
+        "watchos": "2.0",
+        "tvos": "9.0"
+      }
+    },
+    {
+      "name": "HealthKit",
+      "source_files": "Sources/PMKHealthKit/*",
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "frameworks": "HealthKit",
+      "platforms": {
+        "ios": "9.0",
+        "watchos": "2.0"
+      }
+    },
+    {
+      "name": "HomeKit",
+      "source_files": "Sources/PMKHomeKit/*",
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "frameworks": "HomeKit",
+      "platforms": {
+        "ios": "8.0",
+        "watchos": "3.0",
+        "tvos": "9.0"
+      }
+    },
+    {
+      "name": "MapKit",
+      "tvos": {
+        "source_files": "Sources/PMKMapKit/*",
+        "frameworks": "MapKit"
+      },
+      "osx": {
+        "source_files": "Sources/PMKMapKit/*",
+        "frameworks": "MapKit"
+      },
+      "ios": {
+        "source_files": "Sources/PMKMapKit/*",
+        "frameworks": "MapKit"
+      },
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.10",
+        "watchos": "2.0",
+        "tvos": "9.2"
+      }
+    },
+    {
+      "name": "Photos",
+      "osx": {
+        "source_files": "Sources/PMKPhotos/*",
+        "frameworks": "Photos"
+      },
+      "tvos": {
+        "source_files": "Sources/PMKPhotos/*",
+        "frameworks": "Photos"
+      },
+      "ios": {
+        "source_files": "Sources/PMKPhotos/*",
+        "frameworks": "Photos"
+      },
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.13",
+        "tvos": "10.0"
+      }
+    },
+    {
+      "name": "StoreKit",
+      "tvos": {
+        "source_files": "Sources/PMKStoreKit/*",
+        "frameworks": "StoreKit"
+      },
+      "osx": {
+        "source_files": "Sources/PMKStoreKit/*",
+        "frameworks": "StoreKit"
+      },
+      "ios": {
+        "source_files": "Sources/PMKStoreKit/*",
+        "frameworks": "StoreKit"
+      },
+      "dependencies": {
+        "PromiseKit/CorePromise": [
+
+        ]
+      },
+      "platforms": {
+        "ios": "8.0",
+        "osx": "10.10",
+        "tvos": "9.0"
+      }
+    }
+  ],
+  "swift_version": "5.4"
+}

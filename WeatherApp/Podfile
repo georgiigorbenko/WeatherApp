@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'WeatherApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+   
+  pod 'TinyConstraints', '4.0.2'
+  pod 'Moya', '15.0.0'
+  pod "PromiseKit", :git => 'https://github.com/mxcl/PromiseKit.git', :branch => 'v7', :tag => '7.0.0-rc1'
+
+end
