@@ -1,5 +1,5 @@
 //
-//  BDateFormatter.swift
+//  WDateFormatter.swift
 //  WeatherApp
 //
 //  Created by Georgy Gorbenko on 22.08.2021.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BDateFormatter: DateFormatter {
+class WDateFormatter: DateFormatter {
     
     convenience init(type: DateFormatType, timeZone: TimeZoneType = .local) {
         self.init()
@@ -22,7 +22,7 @@ class BDateFormatter: DateFormatter {
 }
 
 // MARK: - Public methods
-extension BDateFormatter {
+extension WDateFormatter {
     
     func string(fromDate date: Date?) -> String? {
         

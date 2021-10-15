@@ -12,10 +12,13 @@ class WImageView: UIImageView {
     
     // MARK: - Lifecycle
     
-    convenience init(image: Design.Icon, contentMode: UIControl.ContentMode) {
-        self.init(image: image())
+    convenience init(image: Design.Icon? = nil,
+                     contentMode: UIControl.ContentMode = .scaleToFill,
+                     tintColor: Design.Color? = nil) {
+        self.init(image: image?())
         
         self.contentMode = contentMode
+        self.tintColor = tintColor?()
     }
     
 }

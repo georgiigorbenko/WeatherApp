@@ -15,7 +15,7 @@ struct ArrayDecodable<Base: APIResponse>: APIResponse {
     init(from decoder: Decoder) throws {
            
         let container = try decoder.singleValueContainer()
-        elements = (try? container.decode([Base].self)) ?? []
+        elements = try container.decode([Base].self)
     }
     
     init(any: Any?) throws {

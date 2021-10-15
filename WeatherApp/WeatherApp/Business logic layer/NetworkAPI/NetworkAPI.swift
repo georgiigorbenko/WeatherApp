@@ -100,6 +100,8 @@ private extension NetworkAPI {
         headers[.api] = App.Network.apiVersion
         headers[.platform] = App.Network.platform
         headers[.version] = App.Network.appVersion
+        headers[.apiKey] = App.Network.apiKey
+        headers[.apiHost] = App.Network.apiHost
         
         var target = APITarget(baseURL: target.baseURL,
                                path: target.path,

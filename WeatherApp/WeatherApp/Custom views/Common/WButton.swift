@@ -14,16 +14,18 @@ class WButton: UIButton {
     
     convenience init(font: Design.Font? = nil,
                      titleColor: Design.Color? = nil,
-                     title: String? = nil,
-                     backgrounColor: UIColor? = nil,
-                     tintColor: UIColor? = nil) {
+                     image: Design.Icon? = nil,
+                     backgrounColor: Design.Color? = nil,
+                     tintColor: Design.Color? = nil,
+                     title: String? = nil) {
         self.init()
         
-        setFont(font?(), for: .normal)
-        setTitleColor(titleColor?(), for: .normal)
+        setFont(font, for: .normal)
+        setImage(image, for: .normal)
+        setTitleColor(titleColor, for: .normal)
         setTitle(title, for: .normal)
-        self.backgroundColor = backgrounColor
-        self.tintColor = tintColor
+        self.backgroundColor = backgrounColor?()
+        self.tintColor = tintColor?()
     }
     
 }
@@ -31,19 +33,19 @@ class WButton: UIButton {
 // MARK: - Public methods
 extension WButton {
     
-    func setTitleColor(_ color: Design.Color, for state: UIControl.State) {
+    func setTitleColor(_ color: Design.Color?, for state: UIControl.State) {
         
-        self.setTitleColor(color(), for: state)
+        self.setTitleColor(color?(), for: state)
     }
     
-    func setImage(_ image: Design.Icon, for state: UIControl.State) {
+    func setImage(_ image: Design.Icon?, for state: UIControl.State) {
         
-        self.setImage(image(), for: state)
+        self.setImage(image?(), for: state)
     }
     
-    func setFont(_ font: Design.Font, for state: UIControl.State) {
+    func setFont(_ font: Design.Font?, for state: UIControl.State) {
         
-        setFont(font(), for: state)
+        setFont(font?(), for: state)
     }
     
 }

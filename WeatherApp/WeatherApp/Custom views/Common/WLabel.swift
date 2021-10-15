@@ -19,12 +19,18 @@ class WLabel: UILabel {
     
     // MARK: - Lifecycle
     
-    convenience init(font: Design.Font? = nil, textColor: Design.Color? = nil, text: String? = nil) {
+    convenience init(font: Design.Font? = nil,
+                     textColor: Design.Color? = nil,
+                     text: String? = nil,
+                     numberOfLines: Int = 1,
+                     textAlligment: NSTextAlignment = .natural) {
         self.init()
         
         self.font = font?()
         self.textColor = textColor?()
         self.text = text
+        self.numberOfLines = numberOfLines
+        self.textAlignment = textAlligment
     }
     
     override var intrinsicContentSize: CGSize {

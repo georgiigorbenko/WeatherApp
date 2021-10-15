@@ -50,6 +50,8 @@ extension HTTPHeadersContainer {
         case platform = "Application-Platform"
         case version = "Application-Version"
         case contentType = "Content-type"
+        case apiKey = "x-rapidapi-key"
+        case apiHost = "x-rapidapi-host"
     }
     
 }

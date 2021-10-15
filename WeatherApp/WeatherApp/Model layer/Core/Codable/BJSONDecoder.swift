@@ -13,13 +13,13 @@ class BJSONDecoder: JSONDecoder {
     override init() {
         super.init()
         
-        dateDecodingStrategy = .formatted(BDateFormatter(type: .yearMonthDay))
+        dateDecodingStrategy = .secondsSince1970
     }
     
     convenience init(dateFormatType: DateFormatType) {
         self.init()
         
-        dateDecodingStrategy = .formatted(BDateFormatter(type: dateFormatType))
+        dateDecodingStrategy = .secondsSince1970
     }
     
 }

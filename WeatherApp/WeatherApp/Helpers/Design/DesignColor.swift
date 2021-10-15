@@ -19,9 +19,13 @@ extension Design {
         case white = "white"
         case black = "black"
         case darkGray = "darkGray"
-        case success = "co_success"
-        case background = "co_background"
-        case label = "co_label"
+        case link = "link"
+        case red = "red"
+        case yellow = "yellow"
+        case dash = "dash"
+        case orange = "orange"
+        case separator = "separator"
+        case green = "green"
         
         func callAsFunction() -> UIColor {
             
@@ -31,11 +35,25 @@ extension Design {
             case .darkGray:
                 return .darkGray
             case .navigationBarTitle:
-                return .white
+                return .black
             case .navigationBarTint:
                 return .white
             case .black:
                 return .black
+            case .link:
+                return .link
+            case .red:
+                return .red
+            case .yellow:
+                return .yellow
+            case .dash:
+                return .lightGray
+            case .orange:
+                return .orange
+            case .separator:
+                return .lightGray
+            case .green:
+                return .green
             default:
                 return UIColor(named: rawValue) ?? .black
             }

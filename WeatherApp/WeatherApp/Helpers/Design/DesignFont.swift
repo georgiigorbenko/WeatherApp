@@ -37,10 +37,13 @@ extension Design {
 
 extension Design.Font {
     
+    /// Use without prefix $ to get the font and with prefix $ to pass it as a parameter in any view factory.
     struct Robotto {
         
-        /// Use without prefix $ to get the font and with prefix $ to pass it as a parameter in any view factory.
         @FontProvider(Robotto(.bold)) static var bold = Design.Font(Self.name, 0, .bold)
+        @FontProvider(Robotto(.medium)) static var medium = Design.Font(Self.name, 0, .medium)
+        @FontProvider(Robotto(.regular)) static var regular = Design.Font(Self.name, 0, .regular)
+        @FontProvider(Robotto(.italic)) static var italic = Design.Font(Self.name, 0, .italic)
         
         private static let name = String(describing: Self.self)
         private let weight: Weight
@@ -53,7 +56,7 @@ extension Design.Font {
         // Will be use on passing Font type as a parameter in any view factory.
         func callAsFunction(_ size: CGFloat = 0) -> Design.Font {
             
-            .init(Self.name, size, weight)
+            Design.Font(Self.name, size, weight)
         }
         
     }

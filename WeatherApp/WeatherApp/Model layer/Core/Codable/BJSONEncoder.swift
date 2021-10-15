@@ -13,13 +13,13 @@ class BJSONEncoder: JSONEncoder {
     override init() {
         super.init()
         
-        dateEncodingStrategy = .formatted(BDateFormatter(type: .yearMonthDay))
+        dateEncodingStrategy = .formatted(WDateFormatter(type: .yearMonthDay))
     }
     
     convenience init(dateFormatType: DateFormatType) {
         self.init()
         
-        dateEncodingStrategy = .formatted(BDateFormatter(type: dateFormatType))
+        dateEncodingStrategy = .formatted(WDateFormatter(type: dateFormatType))
     }
     
 }
